@@ -1,3 +1,5 @@
+-- mod forum topic at https://forum.minetest.net/viewtopic.php?f=9&t=13508
+
 local gbpinvisiable_trans={user={},en={}}
 local gbpinvisiable_tool_hidden=1
 minetest.register_alias("in", "gbpinvisiable:apple")
