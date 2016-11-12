@@ -4,7 +4,7 @@ local gbpinvisiable_trans={user={},en={}}
 local gbpinvisiable_tool_hidden=1
 minetest.register_alias("in", "gbpinvisiable:apple")
 
-minetest.register_tool("gbpinvisiable:apple", {
+minetest.register_tool(":gbpinvisiable:apple", {
 	description = "gpi",
 	range = 7,
 	groups = {not_in_creative_inventory=gbpinvisiable_tool_hidden},
@@ -31,7 +31,7 @@ minetest.register_tool("gbpinvisiable:apple", {
 		end,
 })
 
-minetest.register_entity("gbpinvisiable:en",{
+minetest.register_entity(":gbpinvisiable:en",{
 	gbpinvisiabler=1,
 	hp_max = 1,
 	physical = true,
