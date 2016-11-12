@@ -16,13 +16,14 @@ minetest.register_tool("gbpinvisiable:apple", {
 
 		local en=minetest.add_entity(pos, "gbpinvisiable:en")
 		user:set_attach(en, "",pos, pos)
+		user:set_properties({collisionbox = {0,0,0,0,0,0}}) -- not pointable
 		gbpinvisiable_trans.user=user
 		gbpinvisiable_trans.en=en
 		minetest.after(0.5,function()
-		gbpinvisiable_trans.en:set_hp(0)
-		gbpinvisiable_trans.en:punch(gbpinvisiable_trans.user, 1, "default:diamond_pick")
-		gbpinvisiable_trans.user={}
-		gbpinvisiable_trans.en={}
+			gbpinvisiable_trans.en:set_hp(0)
+			gbpinvisiable_trans.en:punch(gbpinvisiable_trans.user, 1, "default:diamond_pick")
+			gbpinvisiable_trans.user={}
+			gbpinvisiable_trans.en={}
 		end)
 		return itemstack
 		end,
@@ -36,8 +37,8 @@ minetest.register_entity("gbpinvisiable:en",{
 	collisionbox = {-0.5,-0.5,-0.5, 0.5,0.5,0.5},
 	visual = "sprite",
 	visual_size = {x=1, y=1},
-	textures = {"bubble.png"}, 
-	colors = {}, 
+	textures = {"bubble.png"},
+	colors = {},
 	spritediv = {x=1, y=1},
 	initial_sprite_basepos = {x=0, y=0},
 	is_visible = true,
