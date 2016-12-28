@@ -9,7 +9,7 @@ minetest.register_tool(":gbpinvisiable:apple", {
 	range = 7,
 	groups = {not_in_creative_inventory=gbpinvisiable_tool_hidden},
 	inventory_image = "bubble.png^default_apple.png",
-		on_use = function(itemstack, user, pointed_thing)
+		on_use = function(itemstack, user)
 		local pos=user:getpos()
 		if minetest.check_player_privs(user:get_player_name(), {kick=true})==false then
 			minetest.chat_send_player(user:get_player_name(), "You need kick to use this")
